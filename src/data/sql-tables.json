@@ -1,0 +1,100 @@
+[
+    {
+      "tableName": "regions",
+      "schema": [
+        { "fieldName": "regionID", "type": "integer" },
+        { "fieldName": "regionDescription", "type": "string" }
+      ]
+    },
+    {
+      "tableName": "shippers",
+      "schema": [
+        { "fieldName": "shipperID", "type": "integer" },
+        { "fieldName": "companyName", "type": "string" },
+        { "fieldName": "phone", "type": "string" }
+      ]
+    },
+    {
+      "tableName": "suppliers",
+      "schema": [
+        { "fieldName": "supplierID", "type": "integer" },
+        { "fieldName": "companyName", "type": "string" },
+        { "fieldName": "contactName", "type": "string" },
+        { "fieldName": "contactTitle", "type": "string" },
+        { "fieldName": "address", "type": "string" },
+        { "fieldName": "city", "type": "string" },
+        { "fieldName": "region", "type": "string or null" },
+        { "fieldName": "postalCode", "type": "string" },
+        { "fieldName": "country", "type": "string" },
+        { "fieldName": "phone", "type": "string" },
+        { "fieldName": "fax", "type": "string or null" },
+        { "fieldName": "homePage", "type": "string or null" }
+      ]
+    },
+    {
+      "tableName": "territories",
+      "schema": [
+        { "fieldName": "territoryID", "type": "string" },
+        { "fieldName": "territoryDescription", "type": "string" },
+        { "fieldName": "regionID", "type": "integer" }
+      ]
+    },
+    {
+      "tableName": "products",
+      "schema": [
+        { "fieldName": "productID", "type": "integer" },
+        { "fieldName": "productName", "type": "string" },
+        { "fieldName": "supplierID", "type": "integer" },
+        { "fieldName": "categoryID", "type": "integer" },
+        { "fieldName": "quantityPerUnit", "type": "string" },
+        { "fieldName": "unitPrice", "type": "decimal" },
+        { "fieldName": "unitsInStock", "type": "integer" },
+        { "fieldName": "unitsOnOrder", "type": "integer" },
+        { "fieldName": "reorderLevel", "type": "integer" },
+        { "fieldName": "discontinued", "type": "boolean" }
+      ]
+    },
+    {
+      "tableName": "orders",
+      "schema": [
+        { "fieldName": "orderID", "type": "integer" },
+        { "fieldName": "customerID", "type": "string" },
+        { "fieldName": "employeeID", "type": "integer" },
+        { "fieldName": "orderDate", "type": "date" },
+        { "fieldName": "requiredDate", "type": "date" },
+        { "fieldName": "shippedDate", "type": "date or null" },
+        { "fieldName": "shipVia", "type": "integer" },
+        { "fieldName": "freight", "type": "decimal" },
+        { "fieldName": "shipName", "type": "string" },
+        { "fieldName": "shipAddress", "type": "string" },
+        { "fieldName": "shipCity", "type": "string" },
+        { "fieldName": "shipRegion", "type": "string or null" },
+        { "fieldName": "shipPostalCode", "type": "string" },
+        { "fieldName": "shipCountry", "type": "string" }
+      ]
+    },
+    {
+      "tableName": "employees",
+      "schema": [
+        { "fieldName": "employeeID", "type": "integer" },
+        { "fieldName": "lastName", "type": "string" },
+        { "fieldName": "firstName", "type": "string" },
+        { "fieldName": "title", "type": "string or null" },
+        { "fieldName": "titleOfCourtesy", "type": "string or null" },
+        { "fieldName": "birthDate", "type": "date" },
+        { "fieldName": "hireDate", "type": "date" },
+        { "fieldName": "address", "type": "string" },
+        { "fieldName": "city", "type": "string" },
+        { "fieldName": "region", "type": "string or null" },
+        { "fieldName": "postalCode", "type": "string" },
+        { "fieldName": "country", "type": "string" },
+        { "fieldName": "homePhone", "type": "string" },
+        { "fieldName": "extension", "type": "string" },
+        { "fieldName": "photo", "type": "string or null" },
+        { "fieldName": "notes", "type": "string or null" },
+        { "fieldName": "reportsTo", "type": "integer or null" },
+        { "fieldName": "photoPath", "type": "string or null" }
+      ]
+    }
+  ]
+  
