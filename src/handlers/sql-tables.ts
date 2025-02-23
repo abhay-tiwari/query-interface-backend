@@ -3,11 +3,11 @@ import * as fs from "fs";
 import * as path from "path";
 
 const getSqlTables = (req: Request, res: Response) => {
-  const filePath = path.join(__dirname,"..", "data", "sql-tables.json");
+  const filePath = path.join(__dirname, "..", "data", "sql-tables.json");
 
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
-      console.log(err)
+      console.log(err);
       return res.status(500).send("Error reading file");
     }
 

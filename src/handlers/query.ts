@@ -7,7 +7,6 @@ export const getSavedQueries = (req: Request, res: Response) => {
 
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
-      console.log(err);
       return res.status(500).send("Error reading file");
     }
 
@@ -26,7 +25,6 @@ export const saveQuery = (req: Request, res: Response) => {
 
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
-      console.log(err);
       return res.status(500).send("Error reading file");
     }
 
@@ -50,7 +48,6 @@ export const saveQuery = (req: Request, res: Response) => {
         return res.status(500).send("Error parsing JSON");
       }
     } catch (parseErr) {
-      console.error("Error parsing JSON:", parseErr);
       return res.status(500).send("Error parsing JSON");
     }
   });
